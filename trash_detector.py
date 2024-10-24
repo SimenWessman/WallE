@@ -1,16 +1,7 @@
 import cv2 as cv
 import numpy as np
-
-# Constants for distance calculation
-KNOWN_WIDTH = 13  # cm (real-world size of the object)
-FOCAL_LENGTH = 2707  # Approximate focal length (experimentally determined) (2707 for Raspberry Pi Camera)
-
-def calculate_distance(known_width, focal_length, per_width):
-    """
-    Calculate the distance to the object using the formula:
-    Distance = (Known Width * Focal Length) / Perceived Width
-    """
-    return (known_width * focal_length) / per_width
+from utility.utils import *
+from utility.constants import *
 
 def align_match_orb(image_to_align, reference_image, max_features=2000, min_match_quality=35, match_count_threshold=30):
     """
