@@ -3,7 +3,7 @@ import numpy as np
 
 # Constants for distance calculation
 KNOWN_WIDTH = 13  # cm (real-world size of the object)
-FOCAL_LENGTH = 1500  # Approximate focal length (experimentally determined)
+FOCAL_LENGTH = 2707  # Approximate focal length (experimentally determined) (2707 for Raspberry Pi Camera)
 
 def calculate_distance(known_width, focal_length, per_width):
     """
